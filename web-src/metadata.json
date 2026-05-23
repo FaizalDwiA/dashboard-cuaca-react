@@ -1,0 +1,6 @@
+{
+  "name": "Dashboard Cuaca",
+  "description": "Aplikasi ramalan cuaca modern, minimalis, dan responsif dengan latar belakang dinamis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

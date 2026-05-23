@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    root: 'web-src',
     base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
@@ -19,5 +20,12 @@ export default defineConfig(() => {
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
+    build: {
+      // Menghasilkan build langsung ke root proyek utama
+      outDir: path.resolve(__dirname, './'), 
+      
+      // PENTING: Ubah ke false agar file konfigurasi di root TIDAK terhapus otomatis saat build
+      emptyOutDir: false, 
+    }
   };
 });
